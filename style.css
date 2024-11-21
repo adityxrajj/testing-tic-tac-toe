@@ -1,0 +1,128 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  /* Game Container */
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #4c669f, #3b5998, #192f6a);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Board Styling */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .cell {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .cell:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+  }
+  
+  .cell.taken {
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Status Text */
+  .status {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Button Styling */
+  button#reset {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #f94d6a;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+  }
+  
+  button#reset:hover {
+    background: #e63950;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cell {
+      font-size: 1.8rem;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .status {
+      font-size: 1rem;
+    }
+  
+    button#reset {
+      padding: 15px 20px;
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cell {
+      font-size: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .status {
+      font-size: 0.9rem;
+    }
+  
+    button#reset {
+      padding: 15px 20px;
+      font-size: 1rem;
+    }
+  }
+  
